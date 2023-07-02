@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   if (window.matchMedia("(max-width: 480px)").matches) {
     paragraph.innerHTML =
-      "I am a B.E. Information Technology student at St. Francis Institute of Technology, affiliated with Mumbai University. <br> As the Tech Head @CSI_SFIT, I lead technical initiatives and organize events.";
+      "I am a B.E. Information Technology student at St. Francis Institute of Technology, affiliated with Mumbai University. <br> As the Tech Head @CSI_SFIT, I lead technical initiatives and organize events. <br>  I actively engage in staying updated with the latest advancements in the field, collaborating with peers, and participating in hackathons and coding competitions to drive innovation.";
   }
 });
 
@@ -124,4 +124,42 @@ function toggleContent() {
     content.style.display = "none";
     button.innerHTML = "Show more";
   }
+}
+
+// code to send Email
+
+function sendEmail(event) {
+  // Prevent the form from submitting
+  event.preventDefault();
+
+  // Get the form data
+  const fullName = document.getElementById("fullName").value;
+  const emailAddress = document.getElementById("emailAddress").value;
+  const mobileNumber = document.getElementById("mobileNumber").value;
+  const emailSubject = document.getElementById("emailSubject").value;
+  const message = document.getElementById("message").value;
+
+  // Initialize EmailJS with your user ID
+  emailjs.init("ReUUl2MpsoYHTEbHK");
+
+  // Create a template parameters object
+  const templateParams = {
+    fullName: fullName,
+    emailAddress: emailAddress,
+    mobileNumber: mobileNumber,
+    emailSubject: emailSubject,
+    message: message,
+  };
+
+  // Send the email
+  emailjs.send("service_l7uaftt", "template_7l91xvr", templateParams).then(
+    function (response) {
+      console.log("Email sent successfully!", response.status, response.text);
+      // Reset the form
+      document.getElementById("contactForm").reset();
+    },
+    function (error) {
+      console.log("Error sending email:", error);
+    }
+  );
 }

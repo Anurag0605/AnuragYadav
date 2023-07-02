@@ -5,6 +5,7 @@
     <meta name="viewport" content="width= , initial-scale=1.0" />
     <title>Anurag Yadav | Portfolio</title>
     <link rel="stylesheet" href="CSS/style.css" />
+    <script src="https://cdn.emailjs.com/sdk/2.6.4/email.min.js"></script>
 
     <!-- BoxIcons -->
     <link
@@ -69,7 +70,7 @@
           events, and promote the exploration of cutting-edge technologies.
           <br />
           I actively engage in staying updated with the latest advancements in
-          the field to drive innovation and inspire fellow students.
+          the field to drive innovation.
         </p>
         <div class="social-media">
           <a
@@ -98,13 +99,13 @@
       </div>
 
       <div class="home-img">
-        <img src="images/Anu-home (1).png" alt="" />
+        <img src="images/AnuragFinal1 - Copy.png" alt="" />
       </div>
     </section>
 
     <section class="about" id="about">
       <div class="about-img">
-        <img src="images/Anu-home (1).png" alt="" />
+        <img src="images/FT.png" alt="" />
       </div>
 
       <div class="about-content">
@@ -192,7 +193,7 @@
           <h3>Certifications</h3>
           <p id="ecp">
             Check out my certifications from different courses I completed from
-            Internshala, Great Learning.(Click to view)
+            Internshala, Great Learning.(Click to verify)
           </p>
           <div class="cb">
             <i class="bx bx-badge-check"></i>
@@ -372,7 +373,7 @@
             </p>
             <a
               href="https://drive.google.com/file/d/1I0al8svmoKdpO4wUci3v7hg-wzh1kAa1/view?usp=sharing"
-              ><i class="bx bx-link-external"></i
+              ><i class="bx bx-video"></i
             ></a>
           </div>
         </div>
@@ -386,7 +387,7 @@
             </p>
             <a
               href="https://drive.google.com/file/d/1U6j7wK8IMj4GxVlhqfY-9Gq6K2PGGp-8/view?usp=sharing"
-              ><i class="bx bx-link-external"></i
+              ><i class="bx bx-video"></i
             ></a>
           </div>
         </div>
@@ -399,7 +400,7 @@
               a final project for my 2nd-year subject.
             </p>
             <a href="https://github.com/Anurag0605/Gym-Website"
-              ><i class="bx bx-link-external"></i
+              ><i class="bx bxl-github"></i
             ></a>
           </div>
         </div>
@@ -414,7 +415,7 @@
             </p>
             <a
               href="https://github.com/Anurag0605/Full-Authentication-in-Web-Dev-"
-              ><i class="bx bx-link-external"></i
+              ><i class="bx bxl-github"></i
             ></a>
           </div>
         </div>
@@ -441,7 +442,7 @@
               on Internshala, using HTML, CSS, Bootstrap, MySQL, and PHP.
             </p>
             <a href="https://github.com/Anurag0605/Lifestyle-store"
-              ><i class="bx bx-link-external"></i
+              ><i class="bx bxl-github"></i
             ></a>
           </div>
         </div>
@@ -452,23 +453,43 @@
 
     <section class="contact" id="contact">
       <h2 class="heading">Contact <span>Me!</span></h2>
-      <form action="#">
+      <form id="contactForm">
         <div class="input-box">
-          <input type="text" placeholder="Full Name" />
-          <input type="text" placeholder="Email Address" />
+          <input type="text" id="fullName" placeholder="Full Name" required />
+          <input
+            type="email"
+            id="emailAddress"
+            placeholder="Email Address"
+            required
+          />
         </div>
         <div class="input-box">
-          <input type="text" placeholder="Mobile Number" />
-          <input type="text" placeholder="Email Subject" />
+          <input
+            type="text"
+            id="mobileNumber"
+            placeholder="Mobile Number"
+            required
+          />
+          <input
+            type="text"
+            id="emailSubject"
+            placeholder="Email Subject"
+            required
+          />
         </div>
         <textarea
-          name=""
-          id=""
+          id="message"
           cols="30"
           rows="10"
           placeholder="Your Message"
+          required
         ></textarea>
-        <input type="submit" value="Send Message" class="btn" />
+        <input
+          type="submit"
+          onclick="sendEmail()"
+          value="Send Message"
+          class="btn"
+        />
       </form>
     </section>
 
