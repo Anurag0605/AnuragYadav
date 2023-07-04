@@ -904,6 +904,9 @@ section#home.home{
     /* text-align: center;   */
     /* 1option */
     margin-left: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .portfolio-layer h4 {
