@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   if (window.matchMedia("(max-width: 480px)").matches) {
     paragraph.innerHTML =
-      "I am a B.E. Information Technology student at St. Francis Institute of Technology,affiliated by Mumbai University.As the Tech Head @CSI_SFIT, I lead technical initiatives and organize events.<br> I actively engage in staying updated with the latest advancements in the field.";
+      "I am a B.E. Information Technology student at St. Francis Institute of Technology, affiliated by Mumbai University. As the Tech Head @CSI_SFIT, I lead technical initiatives and organize events.<br> I actively engage in staying updated with the latest advancements in the field.";
   }
 });
 
