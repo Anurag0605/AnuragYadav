@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   if (window.matchMedia("(max-width: 480px)").matches) {
     paragraph.innerHTML =
-      "I am a B.E. Information Technology student at St. Francis Institute of Technology, affiliated with Mumbai University. <br> As the Tech Head @CSI_SFIT, I lead technical initiatives and organize events. <br>  I actively engage in staying updated with the latest advancements in the field, collaborating with peers, and participating in hackathons and coding competitions to drive innovation.";
+      "I am a B.E. Information Technology student at St. Francis Institute of Technology,affiliated by Mumbai University.As the Tech Head @CSI_SFIT, I lead technical initiatives and organize events.<br> I actively engage in staying updated with the latest advancements in the field.";
   }
 });
 
@@ -91,11 +91,12 @@ if (window.innerWidth > 768) {
     origin: "right",
   });
 } else {
-  ScrollReveal().reveal(
-    ".home-content h1, .edu, .home-content p, .cert, .table-style td",
-    { origin: "right", distance: "10px", delay: 100 }
-  );
-  ScrollReveal().reveal(".cb", {
+  ScrollReveal().reveal(" .edu, .home-content p, .cert, .table-style td,.bx", {
+    origin: "right",
+    distance: "10px",
+    delay: 100,
+  });
+  ScrollReveal().reveal(".cb , .home-content h1", {
     origin: "left",
     distance: "10px",
     delay: 200,
