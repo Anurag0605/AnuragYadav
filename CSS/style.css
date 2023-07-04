@@ -64,7 +64,7 @@ a {
 }
 
 .nav__link {
-  color:rgb(143, 141, 141);
+  color:white;
   font-size: 2.5rem;
   /* padding: 0.1rem; */
   display: flex;
@@ -1314,6 +1314,9 @@ section#home.home{
     .mobile-nav{
       display: flex;
     }
+  .nav__link {
+  color:rgb(143, 141, 141);
+  }
     
 
     
