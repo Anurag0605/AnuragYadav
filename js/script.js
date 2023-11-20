@@ -137,10 +137,8 @@ function sendEmail(event) {
 }
 
 function toggleProjects() {
-  console.log("Hieeee");
   var hiddenProjects = document.getElementById("hiddenProjects");
   var showMoreBtn = document.getElementById("showMoreBtn");
-
   if (hiddenProjects.style.display === "none") {
     hiddenProjects.style.display = "flex"; // or 'block', depending on your layout
     showMoreBtn.innerText = "Show Less Projects";
