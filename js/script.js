@@ -17,35 +17,6 @@ menuIcon.onclick = () => {
   navbar.classList.toggle("active");
 };
 
-// scroll sections active links
-
-// let navLinks = document.querySelectorAll("nav a");
-
-// window.onscroll = () => {
-//   sections.forEach((sec) => {
-//     let top = window.scrollY;
-//     let offset = sec.offsetTop - 150;
-//     let height = sec.offsetHeight;
-//     let id = sec.getAttribute("id");
-
-//     if (top >= offset && top < offset + height) {
-//       navLinks.forEach((links) => {
-//         links.classList.remove("active");
-//         document
-//           .querySelector("nav a[href*='" + id + "']")
-//           .classList.add("active");
-//       });
-//     }
-//   });
-
-//   //   sticky navbar
-//   let header = document.querySelector(".header1");
-//   header.classList.toggle("sticky", window.scrollY > 100);
-
-//   // removing toggle icon and navbar once clicked on navbar link
-//   menuIcon.classList.remove("bx-x");
-//   navbar.classList.remove("active");
-// };
 let sections = document.querySelectorAll("section");
 
 let navLinksm = document.querySelectorAll(".nav__item a");
@@ -163,4 +134,18 @@ function sendEmail(event) {
       console.log("Error sending email:", error);
     }
   );
+}
+
+function toggleProjects() {
+  console.log("Hieeee");
+  var hiddenProjects = document.getElementById("hiddenProjects");
+  var showMoreBtn = document.getElementById("showMoreBtn");
+
+  if (hiddenProjects.style.display === "none") {
+    hiddenProjects.style.display = "flex"; // or 'block', depending on your layout
+    showMoreBtn.innerText = "Show Less Projects";
+  } else {
+    hiddenProjects.style.display = "none";
+    showMoreBtn.innerText = "Show More Projects";
+  }
 }
